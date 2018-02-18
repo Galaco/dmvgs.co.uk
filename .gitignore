@@ -1,0 +1,12 @@
+
+\.idea/
+
+\.DS_Store
+
+composer\.phar
+
+vendor/
+
+uploads/\.ftpquota
+
+docker/database/safe_dump\.sql

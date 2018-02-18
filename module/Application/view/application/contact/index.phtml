@@ -1,0 +1,39 @@
+<?php
+	$title = "Contact";
+	$this->headTitle($title);
+?>
+<div id="subwrapper">
+	<?php if(isset($this->success)): ?>
+		<?php if($this->success == true): ?>
+			<p style="font-size: 22px; color: #DDD">Thank you for your message</p>
+		<?php else: ?>
+			<p style="font-size: 22px; color: red;">There was a problem sending your message. Please try again</p>
+		<?php endif ?>
+		<?php elseif(isset($this->authenticated)): ?>
+			<p style="font-size: 22px; color: red;">Incorrect CAPTCHA entered</p>
+		<?php else: ?>
+		<p style="font-size: 22px; color: #DDD">Contact us</p>
+	<?php endif ?>
+	<form action="/site/contact" method="POST" id="emailform" class="contact">
+		<label for="email">Email* </label>
+		<input type="text" name="email" value="" placeholder="Preferred contact email"/> </br>
+		<label for="first_name">First Name</label>
+		<input type="text" name="first_name" value="" placeholder="First name" class="input_small"/>
+		<label for="last_name">Last Name</label>
+		<input type="text" name="last_name" value="" placeholder="Last name" class="input_small"/> </br>
+			
+		<label for="subject">Subject </label>
+		<input autocomplete="off" type="text" name="subject" value="" placeholder="Subject (optional)"/></br>
+
+		<label for="message" style="vertical-align: top;">Message* </label>
+		<textarea autocomplete="off" type="textarea" rows="5" size="40" name="message" placeholder="Let us know what you would like from us"></textarea>
+						
+		<div id="captcha">
+		<?php 
+			require_once('vendor/Recaptcha/recaptchalib.php');
+			echo recaptcha_get_html($this->rpublickey);
+		?>
+		</div>
+		<input type="submit" value="Submit" id="submitpost"/>
+	</form>
+</div>

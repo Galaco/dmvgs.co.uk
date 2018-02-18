@@ -1,0 +1,14 @@
+{
+    "name": "dmvgs/dmvgs-application",
+    "description": "dmvgs.co.uk website",
+    "license": "BSD-3-Clause",
+    "homepage": "http://dmvgs.co.uk/",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*",
+        "symfony/filesystem": "^3.4",
+        "symfony/debug": "^3.4",
+	    "galaco/chatter": "dev-master",
+        "robmorgan/phinx": "^0.9"
+    }
+}

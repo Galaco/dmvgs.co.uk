@@ -1,0 +1,87 @@
+#header{
+	width: 960px;
+	min-width: 600px;
+	margin: 0 auto;
+	height: 48px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin-bottom: 16px;
+}
+
+#navbar_upper{
+	width: 100%;
+}
+
+.header.logo{
+	max-width: 250px;
+	max-height: 80px;
+	float: left;
+}
+
+ul.navbar{
+	min-width: 200px;
+	list-style-type: none;
+	margin-top: 32px;
+	float: left;
+}
+
+ul.navbar li{
+	float: left;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+ul.navbar li a{
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	-webkit-transition-duration:200ms;
+	transition-duration: 200ms;
+}
+
+ul.navbar li a:visited{
+	color: white;
+}
+
+ul.navbar li a:hover{
+	color: #DD3333;
+	-webkit-transition-duration:200ms;
+	transition-duration: 200ms;
+}
+
+.logged_in_user{
+	float: right;
+	height: 64px;
+	margin-top: 32px;
+	color: white;
+}
+
+.logged_in_user p{
+	margin: 0px;
+	margin-bottom: 8px;
+	text-align: right;
+	color: grey;
+}
+
+.logged_in_user a{
+	color: black;
+	background-color: #DDD;
+	padding: 4px 16px 4px 16px;
+	min-width: 120px;
+	border-radius: 20px;
+	text-decoration: none;
+	-webkit-transition-duration:200ms;
+	transition-duration: 200ms;
+}
+
+.logged_in_user a:visited{
+	color: black;
+}
+
+.logged_in_user a:hover{
+	background-color: #B2B2FF;
+	-webkit-transition-duration:200ms;
+	transition-duration: 200ms;
+}

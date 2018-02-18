@@ -1,0 +1,50 @@
+.hidden{
+	display: none;
+	opacity: 0%;
+	visibility: hidden;
+}
+
+.rhs{
+	float: right;
+}
+
+.lhs{
+	float: left;
+}
+
+
+.italic{
+	font-style: italic;
+}
+
+span.libArrow{
+	background: url('../img/gradients/libArrow.png') no-repeat!important;
+	background-size: contain;
+	width: 10px;
+	height: 27px;
+	position: absolute;
+	margin-left: 12px;
+	margin-top: -6px;
+}
+
+span.libUnarrow{
+	background: url('../img/gradients/libUnarrow.png') no-repeat!important;
+	background-size: contain;
+	width: 10px;
+	height: 27px;
+	position: absolute;
+	margin-left: -16px;
+	margin-top: -6px;
+	color: white;
+}
+
+.filler{
+	width: 800px;
+	padding-left: 140px;
+	padding-right: 140px;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	color: #999999;
+	font-size: 22px;
+	text-align: center;
+}

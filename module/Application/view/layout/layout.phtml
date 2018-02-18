@@ -1,0 +1,59 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('De Montfort Video Gaming Society '. $this->translate(''))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'href' => $this->basePath() . '/content/img/favicon.png'))
+                        ->prependStylesheet($this->basePath() . '/content/css/layout.css')
+                        ->prependStylesheet($this->basePath() . '/content/css/pages.css')
+                        ->prependStylesheet($this->basePath() . '/content/css/widgets.css')
+                        ->prependStylesheet($this->basePath() . '/content/css/formatting.css')
+                        ->prependStylesheet($this->basePath() . '/content/css/forum.css')
+                        ->prependStylesheet($this->basePath() . '/content/css/header.css')
+                        ->prependStylesheet($this->basePath() . '/chatter/css/chatter.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/scripts/base/layout.js', 'text/javascript')
+            ->prependFile('http://ajax.googleapis.com/ajax/libs/dojo/1.10.0/dojo/dojo.js', 'text/javascript')
+            ->prependFile($this->basePath() . '/scripts/djconfig.js')
+        ; ?>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<meta name="google-site-verification" content="YyX7EKukqxTvxexGf4LCSW76HRuHSTnFG-5rJ7cj0VI" />
+    </head>
+    <body>
+	<div id='header'>
+	    <div id='navbar_upper'>
+		<a href="/"><img class="header logo" src="<?= $this->basePath() . '/content/img/layout/header_logo.jpg' ?>"/></a>
+		<ul class="navbar">
+		    <li><a href="/site/about">FAQ</a></li>
+		    <li><a href="/site/committee">Committee</a></li>
+		    <li><a href="/site/contact">Contact</a></li>
+		    <li><a href="/forum">Forum</a></li>
+		</ul>		
+		<span class="logged_in_user"><p>Welcome
+		    <?= $this->zfcUserIdentity() ? " back " . $this->zfcUserIdentity()->getUsername() . '</p><p><a href="/forum/account">Account</a> <a href="/user/logout">Logout</a></p>' : ' guest. <a href="/user/login">Login</a> <a href="/user/register">Register</a></p>'; ?>
+		</span>	
+	    </div>
+	</div>
+	<img src="<?= $this->basePath() . '/content/img/loading.gif'?>" id="pageloading"/>
+        <div id="content" class="hidden">
+			<div id="wrapper">
+				<?php echo $this->content; ?>
+				<div style="clear:both;"></div>
+			</div>
+            <footer>
+                <p class="footer">This site uses Zend Framework 2 and Dojo Library 1.10.  &copy; 2013 - <?php echo date('Y') ?> <a href="https://www.galaco.me">Galaco</a>. <?php echo $this->translate('All rights reserved.') ?></p>
+            </footer>
+        </div>
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

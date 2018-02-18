@@ -1,0 +1,1 @@
+docker exec -it dmvgs_web bash

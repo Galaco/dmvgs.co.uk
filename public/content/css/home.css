@@ -1,0 +1,99 @@
+body{
+	background: #BBBBBB url(../img/homebg.jpg) top right no-repeat fixed;
+	background-size: 100% auto;
+	width: 100%;
+}
+
+#header{
+	background-color: #121212;
+	margin: 0 auto;
+	margin-top: 600px;
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	border: 0;
+}
+#navbar_upper{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header.logo{
+	margin-top: -16px;
+}
+
+
+ul.navbar{
+	margin-top: 16px;
+}
+
+ul.navbar li a:hover{
+	
+}
+
+.logged_in_user{
+	margin-top: 20px;
+}
+
+.logged_in_user a{
+	color: black;
+	background-color: #DDD;
+	padding: 4px 16px 4px 16px;
+	min-width: 120px;
+	border-radius: 20px;
+	text-decoration: none;
+}
+
+.logged_in_user a:hover{
+	background-color: #B2B2FF;
+}
+
+.logged_in_user a:visited{
+	color: black;
+}
+
+#content{
+	min-width: 100%;
+	width: 100%;
+	max-width: 100%;
+	background-color: #121212;
+	margin: 0 auto;
+}
+
+#wrapper{
+	min-width: 960px;
+	width: 960px;
+	max-width: 960px;
+	min-height: 600px;
+	margin: 0 auto;
+	color: #EEE;
+}
+
+#mainWelcome{
+	margin: 0;
+	padding: 0;
+	padding-top: 64px;
+	line-height: 280%;
+	text-align: justify;
+}
+
+#mainWelcome a, #mainWelcome a:visited{
+	color: #22BB99;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+}
+
+#mainWelcome a:hover{
+	color: #B2B2FF;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+}
+
+#gallery {
+	margin: 0 auto;
+	margin-top: 32px;
+}
+
+.galleryimg{
+	background-color: #121212;
+}
