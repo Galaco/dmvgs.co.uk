@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  web:
+    container_name: web
+    ports:
+      - '8080:80'
+    links:
+      - database
+    build:
+      context: .
+      dockerfile: docker/web/Dockerfile
+    volumes:
+      - ./:/zf2-app
+    environment:
+      - "MYSQL_PORT_3306_TCP_ADDR:32796"
+      - "MYSQL_ENV_MYSQL_ROOT_PASSWORD=password"
+
+  database:
+    container_name: database
+    image: mysql:5.6
+    volumes:
+      - ./docker/database/init.sh:/tmp/init.sh
+      - ./docker/database/seed.sh:/tmp/seed.sh
+      - ./docker/database/data.sql:/tmp/dump.sql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=password"
+      - "MYSQL_DATABASE=dmvgs_forum"

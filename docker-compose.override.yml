@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  web:
+    ports:
+      - '8080:80'
+
+  database:
+    ports:
+      - '32796:3306'
